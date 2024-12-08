@@ -16,6 +16,7 @@
   --background-color-click: rgba(1, 2, 3, 0.103);
   --border-color: rgba(255, 255, 255, 0.068);
   --border-color-click: rgba(255, 255, 255, 0.288);
+  --button-color:   rgba(255, 255, 255, 0.068);
   --footer-color: rgba(255, 255, 255, 0.781);
 }
 
@@ -29,6 +30,7 @@
   --background-color-click: rgba(255, 255, 255, 0);
   --border-color: rgba(0, 0, 0, 0.397);
   --border-color-click: rgba(0, 0, 0, 0.842);
+  --button-color:  rgba(2, 2, 2, 0.062);
   --footer-color: rgba(0, 0, 0, 0.863);
 }
 
@@ -94,13 +96,18 @@ body * {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  animation: slide-back 0.2s;
 }
 
 /* Switch - Classe Light --------------------- */
 
 .light #switch button {
-  left: initial;
-  right: 0;
+  animation: slide-in 0.2s forwards;
+}
+/* Hover Button */
+
+#switch button:hover {
+  outline: 8px solid var(--button-color)
 }
 
 /* Switch - Track ----------- */
@@ -193,5 +200,23 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/* Animação ----------- */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
