@@ -1,0 +1,116 @@
+<!-- Criado com "!" e Enter -->
+
+<!-- Define um documento HTML-->
+<!DOCTYPE html>
+<!-- Idioma / Classe: Light -->
+<html lang="pt-br" class="light">
+  <!-- "Não é possível ver a mente de alguém (head), mas sim a aparência dela (body)". -->
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Caracteres. -->
+    <meta charset="UTF-8" />
+
+    <!-- Para ser compatível com navegadores mais antigos. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Define que o "viewport" se ajuste a largura do dispositivo. -->
+    <!-- viewport - tudo que é visível dentro do espaço disponível da página (body). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Nome -->
+    <title>Discover</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <!-- Primeira caixa de informações. Informações visíveis. -->
+  <body>
+    <!-- Segundo caixa com as informações. -->
+    <div id="container">
+      <!-- Perfil - Foto e @ -->
+      <div id="profile">
+        <!-- Mostrar tal imagem, caso não der, plano alternativo (alt), mostrar descrição. -->
+        <img
+          src="./assets/avatar.png"
+          alt="A foto apresenta um gatinho com pelagem bicolor, preta e branca. Ele está com a língua de fora, parecendo brincalhão e fofo. O gatinho usa um laço rosa em uma de suas orelhas, e tem bigodes atrapalhados..."
+        />
+        <!-- @ -->
+        <p>@gabriellybublitz</p>
+      </div>
+      <!-- Botão Switch Mode -->
+      <div id="switch" onclick="toggleMode()">
+        <button>
+        </button>
+        <span> </span>
+      </div>
+      <!-- Abertura da Lista Desordenada/UL -->
+      <ul>
+        <!-- Primeiro item da lista -->
+        <li>
+          <a href="https://www.instagram.com/by.gaby_nys/" target="_blank"
+            >Meu Instagram ۶ৎ
+          </a>
+        </li>
+        <!-- Segundo item da lista -->
+        <li>
+          <a href="https://github.com/Elly-GB?tab=repositories" target="_blank"
+            >Meu Portfólio ۶ৎ
+          </a>
+        </li>
+        <!-- Terceito item da lista -->
+        <li>
+          <a href="https://www.rocketseat.com.br/" target="_blank"
+            >Acesse a Rocketseat⁀➴
+          </a>
+        </li>
+        <!-- Quarto item da lista -->
+        <li>
+          <a href="https://rocketseat.com.br/explorer" target="_blank"
+            >Conheça o Explorer ✮⋆˙🪐༘⋆˚.
+          </a>
+        </li>
+      </ul>
+      <!-- Social Links -Ícones -->
+      <div id="social-links">
+        <!-- Primeiro -->
+        <a href="https://github.com/Elly-GB" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+        <!-- Segundo -->
+        <a href="https://www.instagram.com/by.gaby_nys/" target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <!-- Terceiro -->
+        <a href="https://www.youtube.com/@gabycookiegamer2324" target="_blank">
+          <ion-icon name="logo-youtube"></ion-icon>
+        </a>
+        <!-- Quarto -->
+        <a href="https://www.linkedin.com/feed/" target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </div>
+      <!-- Rodapé -->
+      <footer>
+        Feito com ♥ pela
+        <a href="https://rocketseat.com.br/" target="_blank">Rocketseat</a>
+      </footer>
+    </div>
+    <!-- Referencia para usar os ícones do site IonIcons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <!-- Referencia - Parte Dois -->
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Ligação com JavaScript -->
+     <script src="./script.js"></script>
+  </body>
+</html>

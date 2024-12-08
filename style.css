@@ -1,0 +1,184 @@
+/* Informações aplicadas a todos os elementos. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variável Raiz. -------- */
+
+:root {
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+  --text-color: rgba(255, 255, 255, 0.911);
+  --background-color: rgba(255, 255, 255, 0.014);
+  --background-color-click: rgba(1, 2, 3, 0.103);
+  --border-color: rgba(255, 255, 255, 0.068);
+  --border-color-click: rgba(255, 255, 255, 0.288);
+  --footer-color: rgba(255, 255, 255, 0.781);
+}
+
+/* Variável Classe. ---------- */
+
+.light {
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --switch-bg-url: url(./assets/sun.svg);
+  --text-color: black;
+  --background-color: rgba(2, 2, 2, 0.062);
+  --background-color-click: rgba(255, 255, 255, 0);
+  --border-color: rgba(0, 0, 0, 0.397);
+  --border-color-click: rgba(0, 0, 0, 0.842);
+  --footer-color: rgba(0, 0, 0, 0.863);
+}
+
+/* BODY - Imagem de Fundo e Valores ; Fonte/Cor [body]*. ---------- */
+body {
+  background: var(--bg-url) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/* Identificador Segunda caixa ---------- */
+#container {
+  width: 360px;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+/* Identificador Perfil - Foto e @ ----------- */
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+/* Identificador Perfil - SOMENTE foto */
+#profile img {
+  width: 112px;
+}
+
+/* Identificador Perfil - SOMENTE @ */
+#profile p {
+  font-weight: 300;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/* Identificador Switch ---------------- */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+/* Identificador Switch - Icones ------------------ */
+
+#switch button {
+  /* Básico */
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: white var(--switch-bg-url) no-repeat center;
+  border-radius: 50%;
+
+  /* Interação com o Track */
+  position: absolute;
+  z-index: 1;
+
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Switch - Classe Light --------------------- */
+
+.light #switch button {
+  left: initial;
+  right: 0;
+}
+
+/* Switch - Track ----------- */
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var (--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 9999px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Lista Desordenada - UL ----------- */
+
+ul {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+/* Links Individualmente - Estética e Transformação */
+ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  /* Estética */
+  text-decoration: none;
+  font-weight: 300;
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  transition: background 0.4s;
+}
+
+/* Pseudo-Classe ------------------------ */
+
+ul li a:hover {
+  background-color: var(--background-color-click);
+  border-color: var(--border-color-click);
+}
+
+/* Social Links - Ícones --------------- */
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0px;
+  font-size: 24px;
+}
+
+/* Social Links - Ícones Específicos */
+#social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  border-radius: 50%;
+  transition: background 0.4s;
+}
+/* Pseudo */
+#social-links a:hover {
+  background: var(--background-color);
+}
+
+/* Rodapé -------------------- */
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200;
+  color: var(--footer-color);
+}
