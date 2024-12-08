@@ -35,6 +35,7 @@
 /* BODY - Imagem de Fundo e Valores ; Fonte/Cor [body]*. ---------- */
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -182,4 +183,15 @@ footer {
   font-size: 14px;
   font-weight: 200;
   color: var(--footer-color);
+}
+
+/* Media Querles */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
